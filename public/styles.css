@@ -1,0 +1,249 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e3c72;
+  margin: 0;
+  height: 100vh;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #1e3c72;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#logoContainer img {
+  height: auto;
+}
+
+.resetButton {
+  display: none;
+  padding-top: 20px;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+#videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sucursal1 {
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.tv-caja {
+  padding: 50px;
+  border-radius: 50px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #0011ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 30px;
+}
+
+.button:hover {
+  background-color: #0011ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+video {
+  cursor: pointer;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+video:hover {
+  transform: scale(1.05);
+}
+
+.admin-video,
+.tv-video {
+  width: 200px;
+  height: auto;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fullscreen-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.fullscreen-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+#monitorContainer,
+#verticalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-top: 20px;
+}
+
+/* From Uiverse.io by catraco */
+.resetButton {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  --fondo: 30, 75, 158;
+  width: 60px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 10px solid rgb(var(--fondo), 0.5);
+  border-radius: 100%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.resetButton .back {
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.resetButton .front {
+  background: linear-gradient(
+    0deg,
+    rgba(var(--primary), 0.6) 20%,
+    rgba(var(--primary)) 50%
+  );
+  box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid rgb(var(--secondary));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: 0.15s;
+  color: rgb(var(--secondary));
+}
+
+.resetButton:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1e3c72;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.modal-content input {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0011ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Videos Sincronizados</title>
+    <link rel="icon" type="image/x-icon" href="https://tienda.anywayinsumos.com.ar/img/producto-1742-logo-1721508805.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="logoContainer">
+            <img src="https://tienda.anywayinsumos.com.ar/img/producto-1742-logo-1721508805.jpg" alt="Logo">
+        </div>
+        <button class="button" id="adminButton">Administrador</button>
+    </header>
+
+    <!-- Modal para ingresar contraseña -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>Ingrese la contraseña de administrador</h2>
+            <input type="password" id="passwordInput" placeholder="Contraseña">
+            <button onclick="checkPassword()">Ingresar</button>
+        </div>
+    </div>
+
+    <div class="sucursal1">
+        <div class="tv-caja">
+            <div id="videoContainer"></div>
+            <div id="monitorContainer"></div>
+            <div id="verticalContainer"></div>
+            <div id="controls">
+                <!-- Botón de reset -->
+                <button class="resetButton" id="resetButton">
+                    <div class="back"></div>
+                    <div class="front">↺</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
