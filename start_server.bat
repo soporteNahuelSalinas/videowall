@@ -1,0 +1,3 @@
+@echo off
+echo Iniciando el servidor Node.js...
+start "Servidor Node.js" node server.js
