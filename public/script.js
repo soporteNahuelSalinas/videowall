@@ -118,7 +118,7 @@ window.loadVideo = function (index) {
       ? "monitor.webm"
       : videoType === "vertical"
       ? "vertical.webm"
-      : `video${index}.webm`;
+      : `${index}.webm`;
 
   const videoWrapper = createVideoWrapper({
     id: `tvVideo_${index}`,
@@ -183,7 +183,7 @@ function initTVVideos(isAdmin) {
   for (let i = 1; i <= 4; i++) {
     const videoWrapper = createVideoWrapper({
       id: `tvVideo_${i}`,
-      src: `/videos/video${i}.webm?${Date.now()}`,
+      src: `/videos/${i}.webm?${Date.now()}`,
       type: "tv",
       index: i,
       isAdmin,
@@ -258,7 +258,7 @@ function handleFileUpload(type, index) {
         ? "monitor"
         : type === "vertical"
         ? "vertical"
-        : `video${index}`
+        : `${index}`
     }_${Date.now()}.webm`;
     formData.append("video", file, newName);
     formData.append("index", index.toString());

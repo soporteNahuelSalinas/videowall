@@ -40,7 +40,7 @@ app.post('/uploadVideo/:type', (req, res) => {
     ? 'monitor.webm'
     : type === 'vertical'
     ? 'vertical.webm'
-    : `video${index}.webm`;
+    : `${index}.webm`;
 
   const uploadPath = path.join(__dirname, 'public', 'videos', fileName);
 
